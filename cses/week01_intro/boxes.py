@@ -1,0 +1,23 @@
+"""
+Problem: Boxes
+Source: CSES
+Topic: Math / Integer arithmetic
+
+Key Idea:
+Split year into halves and test condition.
+
+Time: O(1)
+"""
+
+def min_count(product_count, box_size):
+    return (product_count + box_size - 1) // box_size
+
+
+if __name__ == "__main__":
+    print(min_count(10, 3)) # 4
+    print(min_count(10, 4)) # 3
+    print(min_count(100, 1)) # 100
+    print(min_count(100, 100)) # 1
+    print(min_count(100, 99)) # 2
+    print(min_count(5, 5)) # 1
+    print(min_count(5, 6)) # 1
